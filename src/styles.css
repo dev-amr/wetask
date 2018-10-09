@@ -1,1 +1,114 @@
 /* You can add global styles to this file, and also import other style files */
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+.btn-circle.btn-xl {
+    width: 2.1875em;
+    height: 2.1875em;
+    /* padding: 0.625em 0.69em; */
+    border-radius: 2.1875em;
+    font-size: 1.125em;
+    line-height: 0.5;
+    margin-left: 0.5em;
+}
+
+.btn-circle {
+    width: 1.875em;
+    height: 1.875em;
+    padding: 0.375em 0em;
+    border-radius: 0.9375em;
+    text-align: center;
+    font-size: 0.75em;
+    /* line-height: 1.42857; */
+}
+.item{
+  margin-left: 1.25em;
+}
+.smLeftMarg{
+  margin-left: 0.5em;
+}
+.myheader{
+  background-color: #3CB371 !important;
+  color:#fff;
+}
+.topMarg{
+  margin-top: 0.625em;
+}
+.gfontclr{
+  color:#3CB371 !important;
+  text-decoration: none;
+}
+* div a:link, a:hover, a:active, a:visited{
+  color:#3CB371;
+  text-decoration: none !important;
+}
+
+.headerLinks{
+  color:#fff !important;
+  text-decoration: none;
+  margin-right:0.5em;
+}
+.max{
+  /* line-height: 0.5; */
+  max-height: 3.125em;
+}
+.listcontainer{
+  min-height:100%;
+}
+.listbox{
+  height: 50%;
+}
+.center_div{
+    margin: 0 auto;
+    width:80% /* value of your choice which suits your alignment */
+}
+/*removing caret*/
+a.dropdown-toggle:after{
+ display:none;
+}
+/*for tasks options*/
+.smMargin{
+  margin: 0.6em 0em 0.8em 0em;
+  /* display: inline-block; */
+}
+/* select placeholder */
+select:invalid {
+  color: gray !important;
+}
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: #3CB371;
+}
+/* form Validation */
+input.ng-invalid.ng-touched, select.ng-invalid.ng-touched{
+  border: solid 1px red;
+}
+
+.dropdown-menu {
+    min-width: 1rem !important;
+}
+
+.formText{
+  color: #661400;
+  font-size: 13pt;
+  border-bottom: solid 1px #009973;
+
+  padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.bigLeftMarg{
+  margin-left: 1.5em;
+}
+
+.high{
+  color: #FF4136 !important;
+}
+.medium{
+  color: #FF851B !important;
+}
+.low{
+  color: #3CB371 !important;
+}

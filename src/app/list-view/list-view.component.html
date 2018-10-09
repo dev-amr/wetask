@@ -1,0 +1,12 @@
+
+<h4 class="gfontclr smLeftMarg">{{tasksType|titlecase}} Tasks:</h4>
+<div class="container">
+  <div class="row" >
+    <div class="col-12 form-control" *ngFor="let task of filterItemsOfType(tasksType)">
+      <a routerLink="/home" style="cursor:pointer;" class="gfontclr"[ngClass]="{high: task.priority==='high', medium: task.priority==='medium'}">
+        <i class="fa fa-check"></i>  <p class="d-inline">{{ task.name }}</p>
+        <p class="bigLeftMarg">{{task.description}}</p>
+      </a>
+    </div>
+  </div>
+</div>

@@ -5,4 +5,13 @@
 
 export const environment = {
   production: false
+  // ,
+  // firebase: {
+  //   apiKey: "AIzaSyC2VrMqf4gDHXT3BmwYKHzfBdyoK90lkMs",
+  //   authDomain: "wetask-c5ab9.firebaseapp.com",
+  //   databaseURL: "https://wetask-c5ab9.firebaseio.com",
+  //   projectId: "wetask-c5ab9",
+  //   storageBucket: "wetask-c5ab9.appspot.com",
+  //   messagingSenderId: "446954582476"
+  // }
 };

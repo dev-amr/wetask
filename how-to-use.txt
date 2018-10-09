@@ -1,0 +1,29 @@
+How to use
+----------
+
+Run "npm install" inside this project folder to install all dependencies.
+
+
+if you don't have angular cli installed on your machine Run: npm install -g @angular/cli
+
+
+Make sure you use the latest version of the CLI (upgrade guide below)
+
+Run "ng serve" to see the app in action (try "npm start" in case "ng serve" fails).
+
+
+
+How to upgrade the CLI
+-----------------------
+
+Run the below commands - only use "sudo" on Mac/ Linux.
+
+
+
+sudo npm uninstall -g angular-cli @angular/cli
+
+npm cache clean --force
+sudo 
+npm install -g @angular/cli
+
+this application is also deployed on the following URL: wetask-c5ab9.firebaseapp.com

@@ -1,0 +1,45 @@
+<div class="row" >
+  <div class="col-11 form-control">
+
+    <span class="d-inline">
+      <a  class="d-inline pull-left gfontclr"
+      style="cursor:pointer;"
+      (click)="onComplete(this.task)">
+          <i class="fa fa-square"
+            *ngIf="!task.complete"
+          ></i>
+          <i class="fa fa-check-square"
+            *ngIf="task.complete"
+          ></i>
+      </a>
+    </span>
+
+    <a  class="d-inline gfontclr"
+    (click)="onSelected(task)"
+    style="cursor:pointer;">
+        <p class="d-inline item">{{ task.name }}</p>
+    </a>
+    <span class="d-inline">
+
+      <a  class="d-inline gfontclr pull-right"
+      style="cursor:pointer;"
+      (click)="onRemove(this.task)">
+          <i class="fa fa-trash"></i>
+      </a>
+    </span>
+
+  </div>
+ <!-- to be removed -->
+    <app-task-details
+      *ngIf="selectTaskOnView"
+      [parentTask]="selectTaskOnView"
+      [parentIndex]="index"
+      (detailsCanceled)="removeDetails($event)"
+    ></app-task-details>
+
+  <!-- <app-task-details
+    *ngIf="selectedTask"
+    [task]="selectedTask"
+  ></app-task-details> -->
+
+</div>

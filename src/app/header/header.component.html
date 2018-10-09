@@ -1,0 +1,18 @@
+
+
+    <nav class="navbar navbar-default navbar-fixed-top myheader">
+
+        <div class="col-xs-1 " *ngIf="authService.isAuthenticated()"><a routerLink="/lists" class="headerLinks"><i class="fa fa-th"></i></a></div>
+
+        <span class="col-xs-6 text-center"><a  *ngIf="authService.isAuthenticated()" routerLink="/home" class="text-center topMarg headerLinks">WeTask</a></span>
+        <span class="col-xs-6 text-center"><a *ngIf="!authService.isAuthenticated()" routerLink="/signin" class="text-center topMarg headerLinks">WeTask</a></span>
+        <div class="col-xs-5">
+          <ng-template [ngIf]="!authService.isAuthenticated()">
+          <span><a routerLink="/signin" class="headerLinks">Login</a></span>
+          <span><a routerLink="/signup" class="headerLinks">Register</a></span>
+          </ng-template>
+          <span><a style="cursor: pointer;" class="headerLinks" (click)="onLogout()" *ngIf="authService.isAuthenticated()">Logout</a></span>
+        </div>
+
+      
+    </nav>

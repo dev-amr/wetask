@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-12">
+    <br>
+    <button class="btn btn-success  pull-right headerLinks" routerLinkActive="active" routerLink="/signin">SignIn</button>
+    <button class="btn btn-success pull-right headerLinks" routerLinkActive="active" routerLink="/signup">SignUp</button>
+    <br><br>
+    <form (ngSubmit)="onSignup(f)" #f="ngForm">
+      <p class="form-text formText">Register Below:</p>
+      <div class="form-group">
+        <label for="email">Email: </label>
+        <input type="email" class="form-control" name="email" id="email" ngModel required email #email="ngModel">
+        <span class="form-text text-muted" *ngIf="!email.valid && email.touched">Please enter a valid email!</span>
+      </div>
+      <div class="form-group">
+        <label for="password">Password: </label>
+        <input type="password" class="form-control" name="password" id="password"
+        ngModel required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$">
+        <p id="passwordHelpBlock" class="form-text text-muted">
+          Your password must be at least 6 characters long, at least one uppercase letter, one lowercase letter and one number.
+        </p>
+      </div>
+      <button type="submit" class="btn btn-success pull-right" [disabled]="!f.valid">Sign Up</button>
+    </form>
+  </div>
+</div>

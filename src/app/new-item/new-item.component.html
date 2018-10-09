@@ -1,0 +1,33 @@
+  <div class="container gfontclr">
+    <br>
+    <div class="row"><!--to be removed/exchanged-->
+      <div class="col-12">
+        <button type="button" class="btn btn-success" (click)="fetsh()">Get my Data</button>
+        <button type="button" class="btn btn-success" (click)="send()">Save Changes</button>
+      </div>
+    </div>
+    <br>
+    <div class="row no-gutter">
+
+
+
+      <div class="col-10">
+        <input type="text" [(ngModel)]="usrText" placeholder="New task..." class="form-control">
+      </div>
+      <div class="col-2">
+        <button type="button" class="btn myheader btn-circle btn-xl"
+        (click)="onSave()"><i class="fa fa-plus"></i></button>
+      </div>
+    </div>
+
+    <br><br>
+    <app-task-item
+      *ngFor="let taskElem of tasks; let i = index"
+    [task]="taskElem"
+    [index]="i"
+    (taskRemoved)="taskRemoved($event)"></app-task-item>
+    <!-- <app-task-details
+      *ngIf="selectedTask"
+      [task]="selectedTask"
+    ></app-task-details> -->
+  </div>
